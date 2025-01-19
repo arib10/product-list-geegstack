@@ -1,0 +1,300 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: RedHat ;
+}
+
+@font-face {
+    font-family: RedHat;
+    src: url("assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-color: hsl(13, 31%, 94%);
+}
+
+main.flex {
+    width: 90%;
+    margin: 50px auto;
+    align-items: flex-start;
+}
+
+main section.products {
+    width: 65%;
+}
+
+main section.carts {
+    width: 30%;
+}
+
+section.products div.flex {
+    flex-wrap: wrap;
+}
+article.product {
+    width: 30%;
+    margin: 15px 0px;
+}
+
+article.product > picture img, article.product > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+article.product button.add-to-cart {
+    padding: 7px 15px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    background-color: hsl(20, 50%, 98%);
+    border: 1px solid hsl(14, 65%, 9%);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+article.product.selected button.add-to-cart {
+    display: none;
+}
+
+article .cart-quantity-button {
+    background-color: hsl(14, 86%, 42%);
+    width: 70%;
+    padding: 10px 20px;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    border-radius: 20px;
+    color: hsl(20, 50%, 98%);
+    display: none;
+}
+
+article.product.selected .cart-quantity-button {
+    display: flex;
+}
+
+article .cart-quantity-button svg {
+    border: 1.5px solid hsl(20, 50%, 98%);
+    height: 17px;
+    width: 17px;
+    padding: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+article .cart-quantity-button svg:hover {
+    background-color: hsl(20, 50%, 98%);
+}
+article .cart-quantity-button svg:hover > path {
+    fill: hsl(14, 86%, 42%);
+}
+
+article.product button.add-to-cart:hover {
+    color: hsl(14, 86%, 42%);
+    border-color: hsl(14, 86%, 42%);
+}
+article.product button.add-to-cart img {
+    width: 15px;
+    margin-bottom: -3px;
+}
+.product-description .product-category {
+    font-size: 0.8rem;
+    color: hsl(12, 20%, 44%);
+    font-weight: 600;
+}
+
+.product-description .product-name {
+    color: hsl(14, 65%, 9%);
+    font-weight: 800;
+    margin: 5px 0px;
+}
+.product-description .price {
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+}
+
+.carts {
+    background-color: hsl(20, 50%, 98%);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.carts > h1 {
+    color: hsl(14, 86%, 42%);
+}
+
+.carts #cart-container {
+    display: none;
+}
+
+.carts #empty-cart {
+    text-align: center;
+    padding: 30px 20px;
+    color: hsl(12, 20%, 44%);
+    font-weight: 600;
+}
+.carts #empty-cart p {
+    margin: 10px 0px;
+}
+
+.carts .cart-item {
+    padding: 15px 0px;
+    border-bottom: 1px solid hsl(14, 25%, 72%);
+}
+
+.cart-item .cart-item-name {
+    color: hsl(14, 65%, 9%);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cart-item .remove-icon {
+    border: 1.5px solid hsl(7, 20%, 60%);
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cart-item .remove-icon:hover {
+    border-color: hsl(14, 65%, 9%);
+}
+.cart-item .remove-icon:hover path {
+    fill: hsl(14, 65%, 9%);
+}
+
+.cart-item span {
+    font-size: .8rem;
+    font-weight: 800;
+    display: inline-block;
+    margin-right: 3px;
+}
+.cart-item span.quantity {
+    color: hsl(14, 86%, 42%);
+}
+.cart-item span.actual-price {
+    color: hsl(14, 25%, 72%);
+}
+.cart-item span.total-price {
+    color: hsl(12, 20%, 44%);
+}
+
+#order-total {
+    padding: 15px 0px;
+}
+#order-total p {
+    color: hsl(14, 65%, 9%);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+#order-total h2 {
+    color: hsl(14, 65%, 9%);
+}
+
+#carbon-neutral {
+    background-color: hsl(13, 31%, 94%);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#carbon-neutral img {
+    margin-bottom: -5px;
+}
+
+#confirm-order-btn, #modal #order-confirmed > button  {
+    width: 100%;
+    padding: 15px;
+    color: hsl(20, 50%, 98%);
+    background-color: hsl(14, 86%, 42%);
+    border-radius: 25px;
+    font-weight: 600;
+    border: none;
+    font-size: 1.0rem;
+    cursor: pointer;
+}
+
+/* Order confirmed modal  */
+#modal {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    background-color: hsla(14, 65%, 0%, 0.5);
+    overflow: auto;
+    display: none;
+}
+#modal > div#order-confirmed {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto;
+    background-color: hsl(20, 50%, 98%);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+div#order-confirmed section {
+    margin: 20px 0px;
+    padding: 10px 20px;
+    background-color: hsla(14, 86%, 82%, 0.252);
+    border-radius: 10px;
+}
+div#order-confirmed section article {
+    padding: 10px 0px;
+    border-bottom: 1px solid hsl(14, 25%, 72%);
+}
+div#order-confirmed section article img {
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+div#order-confirmed section > div.flex {
+    padding: 10px 0px;
+}
+
+div#order-confirmed .price {
+    font-weight: 600;
+}
+div#order-confirmed article .product-name {
+    color: hsl(14, 65%, 9%);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+div#order-confirmed article .quantity {
+    color: hsl(12, 20%, 44%);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+div#order-confirmed article .quantity span {
+    color: hsl(14, 86%, 42%);
+    display: inline-block;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 730px) {
+    main.flex {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    main.flex > section {
+        width: 100%;
+    }
+    main.flex > section.products {
+        flex-direction: column;
+    }
+    main.flex > section article.product {
+        width: 100%;
+    }
+}
