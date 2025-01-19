@@ -248,6 +248,7 @@ div#order-confirmed section {
     padding: 10px 20px;
     background-color: hsla(14, 86%, 82%, 0.252);
     border-radius: 10px;
+    transition: display 1s;
 }
 div#order-confirmed section article {
     padding: 10px 0px;
